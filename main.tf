@@ -40,8 +40,8 @@ resource "aws_rds_cluster" "rds" {
   engine                  = var.engine
   engine_version          = var.engine_Version
   database_name = var.db_name
-  master_username         = data.aws_ssm_parameter.username
-  master_password         = data.aws_ssm_parameter.password
+  master_username         = data.aws_ssm_parameter.username.value
+  master_password         = data.aws_ssm_parameter.password.value
   storage_encrypted  =  true
   kms_arn = var.Kms_arn
   db_subnet_group_name = aws_db_subnet_group.main.id
