@@ -59,6 +59,7 @@ resource "aws_rds_cluster_instance" "rds_instances" {
   instance_class     = var.instance_class
   engine             = aws_rds_cluster.rds.engine
   engine_version     = aws_rds_cluster.rds.engine_version
+  skip_final_snapshot = var.skip_final_snapshot
 
 }
 

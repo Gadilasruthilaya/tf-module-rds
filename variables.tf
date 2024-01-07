@@ -10,3 +10,4 @@ variable "instance_class" {}
 variable "kms_key_arn" {}
 variable "vpc_id" {}
 variable "sg_subnet_cidr" {}
+variable "skip_final_snapshot" {}
