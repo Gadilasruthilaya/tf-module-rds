@@ -6,7 +6,8 @@ resource "aws_db_subnet_group" "main" {
     Name = "${var.component}-${var.env}"
   }, var.tags)
 }
-resource "aws_security_group" "sg" {
+
+resource "aws_security_group" "sg-1" {
   name        = "${var.component}-${var.env}-sg"
   description = "${var.component}-${var.env}-sg"
   vpc_id = var.vpc_id
@@ -47,7 +48,7 @@ resource "aws_rds_cluster" "rds" {
   db_subnet_group_name = aws_db_subnet_group.main.id
 
 
-  vpc_security_group_ids = [aws_security_group.sg.id]
+  vpc_security_group_ids = [aws_security_group.sg-1.id]
 
 }
 
