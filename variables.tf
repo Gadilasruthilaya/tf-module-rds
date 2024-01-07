@@ -7,6 +7,6 @@ variable "subnet_ids" {}
 variable "tags" {}
 variable "instance_count" {}
 variable "instance_class" {}
-variable "kms_arn" {}
+variable "kms_key_arn" {}
 variable "vpc_id" {}
 variable "sg_subnet_cidr" {}
