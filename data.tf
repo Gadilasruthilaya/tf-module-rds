@@ -1,9 +1,9 @@
 data "aws_ssm_parameter" "username" {
-  name = "roboshop.${env}.mysql.username"
+  name = "roboshop.${var.env}.mysql.username"
 
 }
 
 data "aws_ssm_parameter" "password" {
-  name = "roboshop.${env}.mysql.password"
+  name = "roboshop.${var.env}.mysql.password"
 }
 
